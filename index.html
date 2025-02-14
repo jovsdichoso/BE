@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>For My Love</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
@@ -10,102 +11,163 @@
       background-color: #fff;
       color: #333;
       font-family: 'Georgia', serif;
-      margin: 0;
-      padding: 0;
     }
+
     .hero {
-      background: url('https://source.unsplash.com/1600x500/?love,couple') no-repeat center/cover;
       height: 100vh;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff;
-      font-size: 3rem;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+      color: #780C28;
       text-align: center;
-      padding: 0 20px;
     }
-    .navbar {
-      background-color: rgba(255, 255, 255, 0.85);
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    }
-    .navbar-brand {
-      color: #e74c3c !important;
+
+    .hero-text h1 {
+      font-size: 3rem;
       font-weight: bold;
-      font-size: 1.5rem;
     }
+
+    .hero-text p {
+      font-size: 1.25rem;
+    }
+
+    .flower-image {
+      max-width: 350px;
+      height: auto;
+    }
+
+    .heart-frame {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+      margin-top: 30px;
+    }
+
+    .frame {
+      width: 150px;
+      height: 150px;
+      border: 4px solid white;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      object-fit: cover;
+      margin: 10px;
+      opacity: 0;
+      animation: fadeInSlideUp 2s forwards;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .frame.center {
+      width: 180px;
+      height: 180px;
+    }
+
+    .frame:hover {
+      transform: scale(1.15);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .heart-letter {
+      background: #fff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      margin-top: 15px;
+    }
+
     .message {
       background-color: #fff;
-      padding: 50px;
-      border-radius: 20px;
+      padding: 2rem;
+      border-radius: 15px;
       box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-      margin-top: -60px;
-      max-width: 650px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      z-index: 10;
-      text-align: center;
       transition: all 0.3s ease;
     }
+
     .message:hover {
-      transform: translateY(-10px);
+      transform: translateY(-5px);
       box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
     }
-    .message h3 {
-      color: #e74c3c;
-      font-size: 2.2rem;
-      margin-bottom: 25px;
-      font-weight: bold;
-    }
-    .message p {
-      font-size: 1.25rem;
-      line-height: 1.8;
-      color: #555;
-      letter-spacing: 1px;
-      margin-bottom: 25px;
-    }
+
     footer {
       background-color: #fff;
       color: #e74c3c;
-      padding: 20px 0;
-      font-size: 1.2rem;
-      text-align: center;
+      padding: 1.5rem 0;
       border-top: 2px solid #e74c3c;
-      position: relative;
-      z-index: 10;
+      font-size: 1rem;
     }
-    footer .heart {
-      color: #ff69b4;
+
+    @keyframes fadeInSlideUp {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-<body>
 
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+<body>
+  <nav class="navbar navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">To My Forever Love 💌</a>
+      <a class="navbar-brand text-danger fw-bold fs-4" href="#">To My Forever Love 💌</a>
     </div>
   </nav>
 
-  <div class="hero">
-    <div>
-      <h1>For You, My Dearest</h1>
-      <p>Happy Valentine's Day, Bebe. I Love You.</p>
+  <section class="hero container-fluid d-flex align-items-center">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6 text-md-start text-center">
+          <h1 class="display-4 fw-bold">For You, My Dearest</h1>
+          <p class="lead">Happy Valentine's Day, Bebe. I Love You.</p>
+        </div>
+        <div class="col-md-6 text-center">
+          <img src="Flower.png" alt="Flower" class="flower-image img-fluid">
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+  <div class="container text-center my-5">
+    <div class="heart-frame">
+      <div>
+        <img src="pic1.jfif" class="frame">
+        <img src="pic.jfif" class="frame">
+        <img src="pic6.jfif" class="frame">
+        <img src="pic3.jfif" class="frame center">
+        <img src="pic5.jfif" class="frame">
+        <img src="pic4.jfif" class="frame">
+        <img src="pic2.jfif" class="frame">
+      </div>
     </div>
   </div>
 
   <div class="container">
-    <div class="message">
-      <h3>My Dearest Love,</h3>
+    <div class="message mx-auto text-center">
+      <h3 class="fw-bold">My Dearest Love,</h3>
       <p>
-        Bebe! 💖 Happy Valentine's Day! Every moment with you feels like a dream I never want to wake up from. You are my everything—my joy, my strength, and my forever. No matter where life takes us, I promise to love you endlessly, to hold your hand through every storm, and to cherish every second we share.<br><br>
-        You are my always and forever. ❤️ Mahal na mahal kita, Bebe. Kahit magkalayo tayo, alam kong hindi magiging hadlang ang distansya sa pagmamahal natin. You are my heart and soul. My love for you grows every day, and I can't wait to hold you in my arms. 💕<br><br>
+        Bebe! 💖 Happy Valentine's Day! Every moment with you feels like a dream I never want to wake up from. You are
+        my everything—my joy, my strength, and my forever. No matter where life takes us, I promise to love you
+        endlessly, to hold your hand through every storm, and to cherish every second we share.<br><br>
+        You are my always and forever. ❤️ Mahal na mahal kita, Bebe. Kahit magkalayo tayo, alam kong hindi magiging
+        hadlang ang distansya sa pagmamahal natin. You are my heart and soul. My love for you grows every day, and I
+        can't wait to hold you in my arms. 💕<br><br>
         Thank you for being my forever. I love you more than words could ever express. 💌
       </p>
     </div>
   </div>
 
+  <footer class="text-center mt-5">
+    <div class="container">
+      <p class="mb-0">Forever Yours, With All My Heart ❤️</p>
+    </div>
+  </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
